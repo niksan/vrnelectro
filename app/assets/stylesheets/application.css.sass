@@ -8,8 +8,24 @@
 @import 'compass/css3'
 @import 'bootstrap'
 
-.container
-  margin-top: 5px
+#container
+  background: image-url('stripped_bg.png')
+  width: 1000px
+  margin: 0px auto 0px auto
+  +box-shadow(#000 0px 0px 5px)
+
+header, footer, article, section, nav, menu, hgroup
+  display: block
+
+header
+  height: 86px
+  width: 1000px
+  background: image-url('top_bg.png') top right no-repeat
+  #logo_block
+    img
+      position: relative
+      display: block
+      margin: 10px 0px 0px 0px
 
 ul#products
   padding: 0px
