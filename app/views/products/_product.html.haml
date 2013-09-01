@@ -1,0 +1,3 @@
+.img= image_tag product.main_photo.small if product.photos?
+.name= link_to truncate(product.name, length: 64, sperator: ' ', omission: '...'), category_product_path(product.category, product)
+= link_to t('actions.to_cart'), cart_items_path(product), class: 'btn btn-info btn-mini btn-buy', remote: true, method: :post

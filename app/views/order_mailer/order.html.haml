@@ -1,0 +1,6 @@
+%ul
+  - @order_datas.each do |k, v|
+    %li= "#{k}: #{v}"
+%ul
+  - @cart_datas.each do |cd|
+    %li= cd

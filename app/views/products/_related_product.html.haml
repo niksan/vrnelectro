@@ -1,0 +1,2 @@
+.img= image_tag product.main_photo.thumb if product.photos?
+.name= link_to truncate(product.name, length: 24, sperator: ' ', omission: '...'), category_product_path(product.category, product)

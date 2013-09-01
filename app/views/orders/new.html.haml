@@ -1,0 +1,29 @@
+%h1 Оформление заказа
+= error_messages(@order)
+= form_for :order, url: orders_path, method: :post, html: { id: 'new_order' } do |f|
+  .control-group
+    = f.label :first_name, t('.first_name'), class: 'control-label'
+    .controls
+      = f.text_field :first_name
+  .control-group
+    = f.label :last_name, t('.last_name'), class: 'control-label'
+    .controls
+      = f.text_field :last_name
+  .control-group
+    = f.label :phone, t('.phone'), class: 'control-label'
+    .controls
+      = f.text_field :phone
+  .control-group
+    = f.label :email, t('.email'), class: 'control-label'
+    .controls
+      = f.email_field :email
+  .control-group
+    = f.label :address, t('.address'), class: 'control-label'
+    .controls
+      = f.text_area :address
+  .control-group
+    = f.label :additional, t('.additional'), class: 'control-label'
+    .controls
+      = f.text_area :additional
+  .form-actions
+    = f.submit t('order.create'), class: 'btn btn-primary btn-large'

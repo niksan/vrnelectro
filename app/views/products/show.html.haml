@@ -1,0 +1,28 @@
+%ul.breadcrumb
+  %li
+    = link_to @product.category.name, category_path(@product.category)
+    %span.divider /
+  %li.active= @product.name
+%h1= @product.name
+- @product.photos.try(:each) do |photo|
+  = link_to image_tag(photo.image.small, class: 'photo'), photo.image.medium.url, class: 'fancybox', rel: "product-#{@product.id}"
+- if !@product.lot.empty?
+  %p
+    Лот:
+    = @product.lot
+%p
+  Цена:
+  = @product.price
+  руб.
+= link_to(cart_items_path(@product), class: 'btn btn-success', remote: true, method: :post) do
+  %i.icon-shopping-cart.icon-white
+  = t('actions.to_cart')
+%p!= @product.description if !@product.description.empty?
+%ul#products
+- if @product.has_related?
+  #related_products
+    %h4 Рекоммендуем:
+    %ul
+      - @product.related.try(:each) do |product|
+        %li.thumbnail
+          = render partial: 'products/related_product', locals: { product: product }

@@ -1,0 +1,4 @@
+%tr
+  %td= truncate(item.product.name, length: 60, sperator: ' ', omission: '...')
+  %td= f.number_field :quantity, value: item.quantity, size: 2, min: 0, max: 99, id: "cart_items[#{item.product.id}]", name: "cart_items[#{item.product.id}]"
+  %td= item.price

@@ -1,0 +1,49 @@
+/*
+ *= require_self
+ *= require_tree .
+ *= require_tree ../../../vendor/assets/stylesheets/fancybox
+ *= require_tree ../../../vendor/assets/stylesheets/gritter
+ */
+
+@import 'compass/css3'
+@import 'bootstrap'
+
+.container
+  margin-top: 5px
+
+ul#products
+  padding: 0px
+  margin: 0px
+  li
+    list-style: none
+    display: inline-block
+    width: 147px
+    height: 260px
+    border: solid 1px #ccc
+    +border-radius(5px)
+    text-align: center
+    margin: 0px 3px 10px 0px
+    .btn-buy
+      margin: 5px 10px 0px 10px
+      display: block
+    .name
+      height: 60px
+      overflow: hidden
+    .img
+      cursor: pointer
+      width: 130px
+      height: 130px
+      margin: 10px auto 5px auto
+      overflow: hidden
+#cart
+  margin: 15px 0px 15px 0px
+  border-top: 1px solid #fff
+  border-bottom: 1px solid #ddd
+  +border-radius(5px)
+  padding: 5px 15px 5px 15px
+  background-color: #f5f5f5
+#to_cart_index
+  height: 17px
+  line-height: 14px
+  padding: 2px 0px 0px 3px
+  display: block

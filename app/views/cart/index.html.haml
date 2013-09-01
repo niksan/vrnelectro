@@ -1,0 +1,17 @@
+%h1= t('cart.title')
+= form_for :cart_item, url: cart_path, method: :put do |f|
+  %table#cart_table.table.table-hover.table-bordered.table-condensed
+    %thead
+      %th.name= t('cart_item.name')
+      %th.quantity= t('cart_item.quantity_short')
+      %th.price= t('cart_item.price')
+    %tbody
+      - @cart.items.each do |item|
+        = render partial: 'cart/items/item', locals: { item: item, f: f }
+    %tfoot
+      %tr.sum
+        %td{ colspan: 2 }= t('cart.sum')
+        %td= @cart.price
+  .form-actions
+    = f.submit t('cart.recalculate'), class: 'btn btn-success'
+    = link_to t('cart.checkout'), new_order_path, class: 'btn btn-primary'

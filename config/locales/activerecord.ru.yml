@@ -1,0 +1,106 @@
+ru:
+  orders:
+    new:
+      first_name: 'Имя'
+      last_name: 'Фамилия'
+      phone: 'Телефон'
+      email: 'E-mail'
+      address: 'Адрес'
+      additional: 'Дополнительная информация'
+  activerecord:
+    models:
+      article: 
+        one: 'статья'
+        few: 'статьи'
+        many: 'статьи'
+        other: 'статьи'
+      category:
+        one: 'категория'
+        few: 'категории'
+        many: 'категории'
+        other: 'категории'
+      page: 
+        one: 'страница'
+        few: 'страницы'
+        many: 'страницы'
+        other: 'страницы'
+      order:
+        one: 'заказ'
+        few: 'заказы'
+        many: 'заказы'
+        other: 'заказы'
+      product: 
+        one: 'товар'
+        few: 'товары'
+        many: 'товары'
+        other: 'товары'
+      photo: 
+        one: 'фото'
+        few: 'фото'
+        many: 'фото'
+        other: 'фото'
+      role: 
+        one: 'роль'
+        few: 'роли'
+        many: 'роли'
+        other: 'роли'
+      gallery: 
+        one: 'галерея'
+        few: 'галереи'
+        many: 'галереи'
+        other: 'галереи'
+      user: 
+        one: 'пользователь'
+        few: 'пользователи'
+        many: 'пользователи'
+        other: 'пользователи'
+    attributes:
+      article:
+        title: 'заголовок'
+        body: 'контент'
+        created_at: 'создано'
+        updated_at: 'обновлено'
+      category:
+        name: 'название'
+        created_at: 'создано'
+        updated_at: 'обновлено'
+      order:
+        first_name: 'имя'
+        last_name: 'фамилия'
+        phone: 'телефон'
+        email: 'e-mail'
+        address: 'адрес'
+        additional: 'дополнительная информация'
+      page:
+        title: 'заголовок'
+        body: 'контент'
+        created_at: 'создано'
+        updated_at: 'обновлено'
+      product:
+        photos_count: 'кол-во изображений'
+        photos_attributes: 'изображение'
+        category: 'категория'
+        description: 'описание'
+        related_products: 'связанные продукты'
+        photos: 'фото'
+        photo: 'фото'
+        name: 'название'
+        price: 'цена'
+        lot: 'лот'
+        created_at: 'создано'
+        updated_at: 'обновлено'
+      gallery:
+        name: 'название'
+        image: 'изображение'
+        created_at: 'создано'
+        updated_at: 'обновлено'
+      user:
+        email: 'e-mail'
+        password: 'пароль'
+        last_sign_in_at: 'крайняя авторизация'
+        sign_in_count: 'количество авторизаций'
+        current_password: 'текущий пароль'
+        password_confirmation: 'подтверждение пароля'
+        created_at: 'создано'
+        updated_at: 'обновлено'
+        roles: 'роли'

@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: webshop_development
+  pool: 5
+  username: postgres
+  password: 860827
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: webshop_test
+  pool: 5
+  username: postgres
+  password: 860827
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: webshop_development
+  pool: 5
+  username: postgres
+  password: 860827

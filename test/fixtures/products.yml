@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  lot: MyString
+  name: MyString
+  description: MyText
+  price: 9.99
+  ancestry: MyString
+  slug: MyString
+
+two:
+  lot: MyString
+  name: MyString
+  description: MyText
+  price: 9.99
+  ancestry: MyString
+  slug: MyString
