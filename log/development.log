@@ -14805,3 +14805,363 @@ Started GET "/assets/stripped_bg.png" for 127.0.0.1 at 2013-09-01 13:26:44 +0400
 
 
 Started GET "/assets/top_bg.png" for 127.0.0.1 at 2013-09-01 13:26:44 +0400
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-09-03 22:15:06 +0400
+  [1m[36mActiveRecord::SchemaMigration Load (30.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+DEPRECATION WARNING: Calling #default_scope without a block is deprecated. For example instead of `default_scope where(color: 'red')`, please use `default_scope { where(color: 'red') }`. (Alternatively you can just redefine self.default_scope.). (called from <class:Category> at /home/niksan/htdocs/vrnelectro/app/models/category.rb:7)
+Completed 401 Unauthorized in 204ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-09-03 22:15:08 +0400
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.html.haml (6.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (141.5ms)
+Completed 200 OK in 950ms (Views: 854.3ms | ActiveRecord: 31.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/cart.css?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/categories.css?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/orders.css?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/products.css?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/gritter/jquery.gritter.css?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/fancybox/jquery.fancybox.css?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/fancybox/jquery.fancybox.pack.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/gritter/jquery.gritter.min.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/stripped_bg.png" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started GET "/assets/top_bg.png" for 127.0.0.1 at 2013-09-03 22:15:10 +0400
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lX58bZw77aLbeQd4y72ssnRL/pjz0kc1rl7qjk2v43I=", "user"=>{"email"=>"admin_light@kupikupon.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (73.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin_light@kupikupon.ru' LIMIT 1
+Completed 401 Unauthorized in 154ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lX58bZw77aLbeQd4y72ssnRL/pjz0kc1rl7qjk2v43I=", "user"=>{"email"=>"admin_light@kupikupon.ru", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.html.haml (1.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 143ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/fancybox/jquery.fancybox.pack.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/gritter/jquery.gritter.min.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/cart.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/categories.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/main.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/orders.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-09-03 22:15:12 +0400
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-09-03 22:15:18 +0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lX58bZw77aLbeQd4y72ssnRL/pjz0kc1rl7qjk2v43I=", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (19.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@example.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (118.0ms)[0m  [1mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["remember_created_at", Tue, 03 Sep 2013 22:15:18 MSK +04:00], ["updated_at", Tue, 03 Sep 2013 22:15:18 MSK +04:00]]
+  [1m[35m (23.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1  [["last_sign_in_at", Sun, 01 Sep 2013 21:53:54 MSK +04:00], ["current_sign_in_at", Tue, 03 Sep 2013 22:15:18 MSK +04:00], ["sign_in_count", 4], ["updated_at", Tue, 03 Sep 2013 22:15:18 MSK +04:00]]
+  [1m[36m (4.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 476ms (ActiveRecord: 167.4ms)
+
+
+Started GET "/admin/" for 127.0.0.1 at 2013-09-03 22:15:19 +0400
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (8.8ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = $1 AND "roles"."name" = 'admin' LIMIT 1[0m  [["user_id", 1]]
+DEPRECATION WARNING: Calling #default_scope without a block is deprecated. For example instead of `default_scope where(color: 'red')`, please use `default_scope { where(color: 'red') }`. (Alternatively you can just redefine self.default_scope.). (called from <class:Photo> at /home/niksan/htdocs/vrnelectro/app/models/photo.rb:8)
+DEPRECATION WARNING: Calling #default_scope without a block is deprecated. For example instead of `default_scope where(color: 'red')`, please use `default_scope { where(color: 'red') }`. (Alternatively you can just redefine self.default_scope.). (called from <class:Product> at /home/niksan/htdocs/vrnelectro/app/models/product.rb:13)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "orders"
+  [1m[36mOrder Load (1.1ms)[0m  [1mSELECT "orders".* FROM "orders" ORDER BY orders.updated_at desc LIMIT 1[0m
+  [1m[35m (40.3ms)[0m  SELECT COUNT(*) FROM "categories"
+  [1m[36mCategory Load (0.7ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY categories.updated_at desc LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY users.updated_at desc LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "articles"
+  [1m[36mArticle Load (0.6ms)[0m  [1mSELECT "articles".* FROM "articles" ORDER BY articles.updated_at desc LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "products" WHERE "products"."disabled" = 'f'
+  [1m[36mProduct Load (0.6ms)[0m  [1mSELECT "products".* FROM "products" WHERE "products"."disabled" = 'f' ORDER BY products.updated_at desc LIMIT 1[0m
+  [1m[35mRailsAdmin::History Load (0.7ms)[0m  SELECT "rails_admin_histories".* FROM "rails_admin_histories" ORDER BY id DESC LIMIT 100
+  Rendered /home/niksan/.rvm/gems/ruby-2.0.0-p247/gems/rails_admin-0.5.0/app/views/rails_admin/main/_dashboard_history.html.haml (11.2ms)
+  Rendered /home/niksan/.rvm/gems/ruby-2.0.0-p247/gems/rails_admin-0.5.0/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (84.9ms)
+  Rendered /home/niksan/.rvm/gems/ruby-2.0.0-p247/gems/rails_admin-0.5.0/app/views/layouts/rails_admin/_secondary_navigation.html.haml (108.1ms)
+  Rendered /home/niksan/.rvm/gems/ruby-2.0.0-p247/gems/rails_admin-0.5.0/app/views/layouts/rails_admin/pjax.html.haml (8.1ms)
+Completed 200 OK in 9509ms (Views: 8009.8ms | ActiveRecord: 181.6ms)
+
+
+Started GET "/assets/rails_admin/rails_admin.css?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.iframe-transport.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/rails_admin/jquery.remotipart.fixed.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.ui.effect.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.ui.core.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.ui.widget.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.ui.mouse.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.ui.sortable.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.ui.menu.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.ui.position.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.ui.autocomplete.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/jquery.ui.datepicker.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/rails_admin/jquery.ui.timepicker.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/rails_admin/ra.datetimepicker.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:28 +0400
+
+
+Started GET "/assets/rails_admin/jquery.colorpicker.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/rails_admin/ra.filter-box.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/rails_admin/ra.filtering-multiselect.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/rails_admin/ra.filtering-select.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/rails_admin/ra.remote-form.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/rails_admin/jquery.pjax.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/rails_admin/ra.nested-form-hooks.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/rails_admin/ra.widgets.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/rails_admin/ui.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/rails_admin/custom/ui.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/rails_admin/rails_admin.js?body=1" for 127.0.0.1 at 2013-09-03 22:15:29 +0400
+
+
+Started GET "/assets/fontawesome-webfont.woff" for 127.0.0.1 at 2013-09-03 22:15:30 +0400
+
+
+Started GET "/admin/order?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-09-03 22:15:31 +0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"order"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.5ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = $1 AND "roles"."name" = 'admin' LIMIT 1  [["user_id", 1]]
+  [1m[36mOrder Load (0.7ms)[0m  [1mSELECT "orders".* FROM "orders" ORDER BY orders.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "orders"
+  Rendered /home/niksan/.rvm/gems/ruby-2.0.0-p247/gems/rails_admin-0.5.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (88.5ms)
+Completed 200 OK in 192ms (Views: 123.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/category?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-09-03 22:15:32 +0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"category"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.5ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = $1 AND "roles"."name" = 'admin' LIMIT 1  [["user_id", 1]]
+  [1m[36mCategory Load (0.6ms)[0m  [1mSELECT "categories".* FROM "categories" ORDER BY categories.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "categories"
+  Rendered /home/niksan/.rvm/gems/ruby-2.0.0-p247/gems/rails_admin-0.5.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (176.5ms)
+Completed 200 OK in 225ms (Views: 197.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-09-03 22:15:34 +0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (4.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRole Load (0.5ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = $1 AND "roles"."name" = 'admin' LIMIT 1  [["user_id", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT 20 OFFSET 0[0m
+  [1m[35mRole Load (1.0ms)[0m  SELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = $1  [["user_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered /home/niksan/.rvm/gems/ruby-2.0.0-p247/gems/rails_admin-0.5.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (50.7ms)
+Completed 200 OK in 100ms (Views: 69.4ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/admin/article?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-09-03 22:15:35 +0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"article"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = $1 AND "roles"."name" = 'admin' LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mArticle Load (0.6ms)[0m  SELECT "articles".* FROM "articles" ORDER BY articles.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "articles"[0m
+  Rendered /home/niksan/.rvm/gems/ruby-2.0.0-p247/gems/rails_admin-0.5.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (25.0ms)
+Completed 200 OK in 99ms (Views: 43.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/admin/product?_pjax=%5Bdata-pjax-container%5D" for 127.0.0.1 at 2013-09-03 22:15:35 +0400
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"product"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" INNER JOIN "roles_users" ON "roles"."id" = "roles_users"."role_id" WHERE "roles_users"."user_id" = $1 AND "roles"."name" = 'admin' LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mProduct Load (0.7ms)[0m  SELECT "products".* FROM "products" WHERE "products"."disabled" = 'f' ORDER BY products.id desc LIMIT 20 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "products" WHERE "products"."disabled" = 'f'[0m
+  Rendered /home/niksan/.rvm/gems/ruby-2.0.0-p247/gems/rails_admin-0.5.0/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (52.9ms)
+Completed 200 OK in 156ms (Views: 71.2ms | ActiveRecord: 2.6ms)

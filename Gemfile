@@ -19,7 +19,7 @@ gem 'yaml_db', github: 'lostapathy/yaml_db'
 gem 'sass-rails'
 gem 'bootstrap-sass'
 gem 'compass-rails', github: "Compass/compass-rails", branch: "rails4-hack"
-gem 'friendly_id', branch: 'master'
+gem 'friendly_id', github: 'norman/friendly_id'
 gem 'state_machine'
 gem 'russian'
 gem 'jquery-rails'
