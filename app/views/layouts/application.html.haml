@@ -11,7 +11,8 @@
     %header
       #logo_block
         = link_to image_tag('logo.png', alt: 'vrn-electro'), root_path, id: 'logo'
-    = notice
-    = alert
+        %span.slogan Интернет магазин электроники для дома, офиса и производства
     %section
+      = notice
+      = alert
       = yield
