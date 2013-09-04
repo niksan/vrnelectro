@@ -24,7 +24,11 @@
           %br
           На сумму 45 000 руб.
       #additional_block
-        rwer
+        .navigation
+          = link_to 'Обратная связь', root_path
+          |
+          = link_to 'Карта сайта', root_path
+        = link_to 'Оформить заявку', root_path, class: 'make_request'
 
     %section
       = notice
