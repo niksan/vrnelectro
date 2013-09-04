@@ -8,14 +8,14 @@
 @import 'compass/css3'
 @import 'bootstrap'
 
+header, footer, article, section, nav, menu, hgroup
+  display: block
+
 #container
   background: image-url('stripped_bg.png')
   width: 1000px
   margin: 0px auto 0px auto
   +box-shadow(#000 0px 0px 5px)
-
-header, footer, article, section, nav, menu, hgroup
-  display: block
 
 header
   margin-top: 0px
@@ -24,8 +24,49 @@ header
   background: image-url('top_bg.png') top right no-repeat
   #logo_block
     margin: 0px 0px 0px 5px
+    float: left
     #logo
-      margin-top: 10px
       display: block
       width: 169px
       height: 65px
+      margin-left: 15px
+    span.slogan
+      display: block
+      margin-top: -5px
+      font-size: 12px
+      width: 250px
+      line-height: 10px
+  #contacts_block
+    float: left
+    width: 210px
+    height: 86px
+    margin-left: 80px
+    padding-top: 25px
+    +text-shadow(#000 1px 1px 0)
+    color: #fff
+    .phone 
+      span.prefix
+        font-size: 14px !important
+      span.number
+        font-size: 30px !important
+    .email
+      font-size: 14px
+  #cart
+    float: left
+    width: 210px
+    height: 86px
+    +text-shadow(#000 1px 1px 0)
+    color: #fff
+    background: image-url('cart.png') no-repeat 17px 10px
+    span.title
+      font-size: 16px  
+      text-transform: uppercase
+      display: block
+      margin: 10px 0px 0px 100px
+    .content
+      margin: 5px 0px 0px 85px
+      font-size: 12px
+  #additional_block
+    float: left
+    width: 245px
+    height: 86px
