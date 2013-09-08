@@ -1,5 +1,5 @@
-application = 'webshop'
-domain = 'webshop.com'
+application = 'shop.vrnelectro'
+domain = 'shop.vrnelectro.ru'
 # Sample verbose configuration file for Unicorn (not Rack)
 #
 # This configuration file documents many features of Unicorn

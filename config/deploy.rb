@@ -4,7 +4,7 @@ load 'deploy/assets'
 ssh_options[:forward_agent] = true
 
 set :keep_releases, 3
-set :application,     'webshop'
+set :application,     'vrnelectro'
 set :deploy_server,   "82.196.2.187"
 set :bundle_without,  [:development, :test]
 set :user,            "root"
@@ -21,7 +21,7 @@ set :rvm_ruby_string, '2.0.0-p247'
 set :rake,            "rvm use #{rvm_ruby_string} do bundle exec rake" 
 set :bundle_cmd,      "rvm use #{rvm_ruby_string} do bundle"
 set :scm,             :git
-set :repository,      'git://github.com/niksan/webshop.git'
+set :repository,      'git://github.com/niksan/vrnelectro.git'
 
 before 'deploy:assets:precompile', :remove_paths, :set_links
 after 'deploy:update_code', :do_migrations
