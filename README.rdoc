@@ -1,9 +1,1 @@
-== Getting Started
-
-   1. bundle exec rake db:create
-   2. bundle exec rake db:migrate
-   3. bundle exec rake db:seed
-
-Default admin user:
-  email: admin@example.com
-  password: adminadmin
+== Hi
