@@ -49,9 +49,6 @@ GEM
     addressable (2.3.5)
     ancestry (2.0.0)
       activerecord (>= 3.0.0)
-    anjlab-bootstrap-rails (3.0.0.2)
-      railties (>= 3.0)
-      sass (>= 3.2)
     arel (4.0.0)
     atomic (1.1.13)
     bcrypt-ruby (3.1.2)
@@ -267,9 +264,9 @@ PLATFORMS
 
 DEPENDENCIES
   ancestry
-  anjlab-bootstrap-rails (>= 3.0.0.0)
   better_errors
   binding_of_caller
+  bootstrap-sass (~> 2.3.2.0)
   cancan
   capistrano
   carrierwave
