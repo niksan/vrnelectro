@@ -17,7 +17,7 @@ gem 'gritter_notices'
 gem 'kaminari'
 gem 'yaml_db', github: 'lostapathy/yaml_db'
 gem 'sass-rails'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '~> 2.3.2.0'
 gem 'compass-rails', github: "Compass/compass-rails", branch: "rails4-hack"
 gem 'friendly_id', github: 'norman/friendly_id'
 gem 'state_machine'
