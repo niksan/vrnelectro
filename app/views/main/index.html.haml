@@ -1,4 +1,0 @@
-%ul#products
-  - @products.try(:each) do |product|
-    %li
-      = render partial: 'products/product', locals: { product: product }

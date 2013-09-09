@@ -117,8 +117,22 @@ nav#main_menu
       display: inline-block
       background: image-url('main_menu_sperator.png') top right no-repeat
       a
-        height: 37px
+        height: 29px
         display: block
         padding: 8px 15px 0px 10px
         color: #fff
         +text-shadow(#666 1px 1px 0)
+    li:last-child
+      background: none
+#wrapper
+  width: 936px
+  margin-left: 25px
+  background: image-url('left_shadow.png') top left no-repeat
+  padding-left: 7px
+#content
+  background: #fff6e2
+  min-height: 200px
+  +border-bottom-radius(10px)
+  margin-bottom: 30px
+footer
+  margin-top: 10px

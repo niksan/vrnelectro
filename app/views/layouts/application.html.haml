@@ -35,7 +35,11 @@
     #top_line
     #slider= render partial: 'share/slider', locals: { slides: @slides }
     %nav#main_menu= render 'share/main_menu'
-    %section
-      = notice
-      = alert
-      = yield
+    #wrapper
+      #content
+        %section
+          = notice
+          = alert
+          = yield
+      %footer
+      .clearfix
