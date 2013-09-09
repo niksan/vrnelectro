@@ -37,9 +37,13 @@
     %nav#main_menu= render 'share/main_menu'
     #wrapper
       #content
+        .left
+          %span.header Продукция
+          %nav#catalog_menu= render 'share/catalog_menu'
         %section
           = notice
           = alert
           = yield
+        .clearfix
       %footer
       .clearfix

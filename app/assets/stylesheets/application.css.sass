@@ -131,8 +131,40 @@ nav#main_menu
   padding-left: 7px
 #content
   background: #fff6e2
-  min-height: 200px
   +border-bottom-radius(10px)
   margin-bottom: 30px
+  padding-bottom: 30px
+  .left
+    float: left
+    width: 256px
+    span.header
+      display: block
+      text-align: center
+      text-transform: uppercase
+      color: #4e6800
+      margin-top: 15px
+    ul.catalogs
+      margin: 10px 0px 0px 0px
+      padding: 0px
+      list-style-type: none
+      li
+        display: block
+        margin-bottom: 4px
+        a
+          display: block
+          padding: 5px 10px 5px 15px
+          color: #fff
+          +text-shadow(#666 1px 1px 0)
+      li:nth-child(odd)
+        background: #aaa497
+      li:nth-child(even)
+        background: #757169
+  section
+    display: block
+    float: left
+    width: 667px
+    background: #fff
+    +border-bottom-radius(10px)
+    min-height: 200px
 footer
   margin-top: 10px
