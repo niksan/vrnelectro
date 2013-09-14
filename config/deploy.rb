@@ -4,7 +4,7 @@ load 'deploy/assets'
 ssh_options[:forward_agent] = true
 
 set :keep_releases, 3
-set :application,     'shop.vrnelectro'
+set :application,     'webshop'
 set :deploy_server,   "82.196.2.187"
 set :bundle_without,  [:development, :test]
 set :user,            "root"
