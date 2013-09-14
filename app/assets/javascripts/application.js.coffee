@@ -1,6 +1,5 @@
 #= require jquery
 #= require jquery_ujs
-#= require turbolinks
 #= require ../../../vendor/assets/javascripts/bootstrap-alert
 #= require_tree ../../../vendor/assets/javascripts/fancybox
 #= require_tree ../../../vendor/assets/javascripts/gritter

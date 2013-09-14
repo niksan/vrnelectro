@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', branch: '4.0-stable'
-gem 'turbolinks'
+#gem 'turbolinks'
 gem 'protected_attributes'
 gem 'pg'
 gem 'rails_admin'
