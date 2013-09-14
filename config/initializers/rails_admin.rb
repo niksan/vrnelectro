@@ -14,7 +14,7 @@ RailsAdmin.config do |config|
     nestable
   end
 
-  config.main_app_name = ['WebShop', 'Admin']
+  config.main_app_name = ['VrnElectro', 'Admin']
   config.authorize_with :cancan
   config.current_user_method { current_user } # auto-generated
   config.audit_with :history, 'User'
