@@ -1,7 +1,10 @@
 class CartController < ApplicationController
 
   def index
-    redirect_to root_path if @cart.empty?
+    if @cart.empty?
+      flash[:alert] = t('cart.empty')
+      redirect_to root_path
+    end
   end
 
   def update

@@ -7,6 +7,8 @@
   = csrf_meta_tags
   = include_gritter
 %body
+  = gflash
+  = gritter_flash_messages
   #container
     %header
       #logo_block
@@ -38,8 +40,6 @@
           %span.header Продукция
           %nav#catalog_menu= render 'share/catalog_menu'
         %section
-          = notice
-          = alert
           = yield
         .clearfix
       %footer
