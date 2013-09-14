@@ -25,7 +25,10 @@ gem 'russian'
 gem 'jquery-rails'
 gem 'coffee-rails'
 
-gem 'uglifier'
+group :assets do
+  gem 'uglifier'
+  gem 'turbo-sprockets-rails3'
+end
 
 group :development do
   gem 'better_errors'
