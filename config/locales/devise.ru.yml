@@ -24,6 +24,8 @@ ru:
       unauthenticated: "Вы должны войти или зарегистрироваться, прежде чем продолжить."
       unconfirmed: "Вам необходимо подтвердить ваш аккаунт, прежде чем продолжить."
       already_authenticated: 'Вы уже вошли.'
+      user:
+        not_found_in_database: 'Email или пароль введены неверно.'
     invitations: 
       invitation_token_invalid: "Введённый вами код приглашения не действителен!"
       send_instructions: "Ваше приглашение отправлено."

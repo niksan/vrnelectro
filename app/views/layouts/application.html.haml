@@ -19,16 +19,13 @@
         .email vrnelectro@mail.ru
       #cart
         %span.title Корзина
-        .content
-          У вас 15 товаров
-          %br
-          На сумму 45 000 руб.
+        = render 'share/cart_content'
       #additional_block
         .navigation
           = link_to 'Обратная связь', root_path
           |
           = link_to 'Карта сайта', root_path
-        = link_to 'Оформить заявку', root_path, class: 'make_request'
+        = link_to 'Оформить заявку', cart_index_path, class: 'make_request'
         .social_networks
           %script{ type: 'text/javascript', src: '//yandex.st/share/share.js', charset: 'utf-8' }
           .yashare-auto-init{ :'data-yashareL10n' => 'ru', :'data-yashareType' => 'none', :'data-yashareQuickServices' => 'vkontakte,facebook,twitter,odnoklassniki' } 
@@ -53,7 +50,7 @@
         .central
           = render 'share/counters/liveinternet'
         .right
-          %p Copyright &copy; 2013, All Rights Reserved
+          %p Copyright &copy; 2013. All Rights Reserved
           %p
             Разработка сайта:
             = link_to 'NikSan', 'http://niksan.ru'

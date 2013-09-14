@@ -1,12 +1,11 @@
-#cart_content
+.content
   - if !@cart.empty?
-    %p
-      = cart.quantity
-      = t('cart.products')
-    %p
-      = t('cart.on_sum')
-      = cart.price
-      = t('cart.currency')
-    = link_to t('cart.go_to_cart'), cart_index_path, class: 'btn btn-success', id: "to_cart_index"
+    У вас
+    = cart.quantity
+    товаров
+    %br
+    На сумму
+    = cart.price
+    руб.
   - else
     %p= t('cart.empty') 
