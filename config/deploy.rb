@@ -13,7 +13,7 @@ set :use_sudo,        false
 set :deploy_to,       "/srv/htdocs/#{application}"
 set :unicorn_conf,    "#{deploy_to}/current/config/unicorn.rb"
 set :unicorn_pid,     "#{deploy_to}/shared/pids/unicorn.pid"
-#set :bundle_dir,      File.join(fetch(:shared_path), 'gems')
+set :bundle_dir,      File.join(fetch(:shared_path), 'gems')
 role :web,            deploy_server
 role :app,            deploy_server
 role :db,             deploy_server, primary: true
