@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-WebShop::Application.load_tasks
+VrnElectro::Application.load_tasks
