@@ -1,5 +1,5 @@
 $(document).ready ->
-  $('#cart_content').html("<%= escape_javascript render(:partial => 'shared/cart_content', locals: {cart: @cart}) %>")
+  $('#cart .content').html("<%= escape_javascript render(:partial => 'shared/cart_content', locals: {cart: @cart}) %>")
   $.gritter.add({
     title: "<%= t('cart_item.added').to_s %>",
     text: ' ',

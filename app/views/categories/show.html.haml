@@ -1,5 +1,4 @@
 %h1= @category.name
 %ul#products
   - @category.products.try(:each) do |product|
-    %li
-      = render partial: 'products/product', locals: { product: product }
+    %li= render partial: 'products/product', locals: { product: product }

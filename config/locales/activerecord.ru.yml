@@ -62,6 +62,8 @@ ru:
         updated_at: 'обновлено'
       category:
         name: 'название'
+        parent: 'родитель'
+        parent_id: 'родитель'
         created_at: 'создано'
         updated_at: 'обновлено'
       order:
