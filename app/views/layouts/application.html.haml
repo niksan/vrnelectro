@@ -32,7 +32,9 @@
           %script{ type: 'text/javascript', src: '//yandex.st/share/share.js', charset: 'utf-8' }
           .yashare-auto-init{ :'data-yashareL10n' => 'ru', :'data-yashareType' => 'none', :'data-yashareQuickServices' => 'vkontakte,facebook,twitter,odnoklassniki' } 
     #top_line
-    #slider= render partial: 'share/slider', locals: { slides: @slides }
+    #slider
+      = render partial: 'share/slider', locals: { slides: @slides }
+      =# image_tag @slides.first.img.medium
     %nav#main_menu= render 'share/main_menu'
     #wrapper
       #content

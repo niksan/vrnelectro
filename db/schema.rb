@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130722183027) do
+ActiveRecord::Schema.define(:version => 20130916091032) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -37,6 +37,9 @@ ActiveRecord::Schema.define(:version => 20130722183027) do
 
   add_index "categories", ["ancestry"], :name => "index_categories_on_ancestry"
   add_index "categories", ["slug"], :name => "index_categories_on_slug"
+
+  create_table "categories_products", :id => false, :force => true do |t|
+  end
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -149,6 +152,15 @@ ActiveRecord::Schema.define(:version => 20130722183027) do
   create_table "roles_users", :id => false, :force => true do |t|
     t.integer "role_id"
     t.integer "user_id"
+  end
+
+  create_table "slides", :force => true do |t|
+    t.string   "name"
+    t.string   "img"
+    t.string   "ancestry"
+    t.integer  "position"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

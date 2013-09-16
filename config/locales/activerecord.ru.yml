@@ -44,6 +44,11 @@ ru:
         few: 'роли'
         many: 'роли'
         other: 'роли'
+      slide: 
+        one: 'слайд'
+        few: 'слайды'
+        many: 'слайды'
+        other: 'слайды'
       gallery: 
         one: 'галерея'
         few: 'галереи'
@@ -89,6 +94,11 @@ ru:
         name: 'название'
         price: 'цена'
         lot: 'лот'
+        created_at: 'создано'
+        updated_at: 'обновлено'
+      slide:
+        name: 'название'
+        img: 'изображение'
         created_at: 'создано'
         updated_at: 'обновлено'
       gallery:

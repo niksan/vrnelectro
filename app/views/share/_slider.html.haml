@@ -2,9 +2,6 @@
   #myCarousel.carousel.slide
     .carousel-inner
       - slides.try(:each) do |slide|
-        - if slide == slides.first
-          .item.active= image_tag slide.image.medium.url
-        - else
-          .item= image_tag slide.image.medium.url
+        .item{ class: (slide == slides.first ? '' : 'active') }= image_tag slide.img.medium.url
     = link_to raw('&lsaquo;'), '#myCarousel', :'data-slide' => 'prev', class: 'carousel-control left'
     = link_to raw('&rsaquo;'), '#myCarousel', :'data-slide' => 'next', class: 'carousel-control right'

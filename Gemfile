@@ -22,6 +22,7 @@ gem 'state_machine'
 gem 'russian'
 gem 'jquery-rails'
 gem 'coffee-rails', '~> 3.2.1'
+gem 'roo'
 
 group :assets do
   gem 'uglifier', '>= 1.0.3'

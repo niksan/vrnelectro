@@ -151,7 +151,26 @@ RailsAdmin.config do |config|
     export do; end
   end
 
-   config.model 'User' do
+  config.model 'Slide' do
+    nestable_list true
+    configure :id, :integer 
+    configure :name, :string 
+    configure :img, :carrierwave
+    configure :created_at, :datetime 
+    configure :updated_at, :datetime 
+    list do
+      field :img
+      field :name
+    end
+    show do; end
+    edit do
+      field :img
+      field :name
+    end
+    export do; end
+  end
+
+  config.model 'User' do
     configure :roles do
       inverse_of :users
     end
@@ -167,7 +186,7 @@ RailsAdmin.config do |config|
     configure :last_sign_in_at, :datetime 
     configure :current_sign_in_ip, :string 
     configure :last_sign_in_ip, :string 
-    configure :created_at, :datetime 
+     configure :created_at, :datetime 
     configure :updated_at, :datetime 
     list do
       field :email

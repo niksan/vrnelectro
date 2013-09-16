@@ -1,11 +1,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :find_root_categories, :initialize_cart
+  before_filter :find_root_categories, :initialize_cart, :init_slides
   
   private
     
     def initialize_cart
       @cart = session[:cart] ||= Cart.new
+    end
+
+    def init_slides
+      @slides = Slide.all
     end
 
     def find_root_categories
