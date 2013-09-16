@@ -253,12 +253,12 @@ DEPENDENCIES
   ancestry
   better_errors
   binding_of_caller
-  bootstrap-sass
+  bootstrap-sass (~> 2.3.2.0)
   cancan
   capistrano
   carrierwave
   ckeditor
-  coffee-rails
+  coffee-rails (~> 3.2.1)
   compass-rails
   debugger
   devise
@@ -275,10 +275,10 @@ DEPENDENCIES
   rails_admin
   rails_admin_nestable
   russian
-  sass-rails
+  sass-rails (~> 3.2.3)
   state_machine
   thin
   turbo-sprockets-rails3
-  uglifier
+  uglifier (>= 1.0.3)
   unicorn
   yaml_db

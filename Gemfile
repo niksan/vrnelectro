@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
-#gem 'turbolinks'
-#gem 'protected_attributes'
 gem 'pg'
 gem 'rails_admin'
 gem 'rails_admin_nestable'
@@ -15,18 +13,18 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'gritter_notices'
 gem 'kaminari'
-gem 'yaml_db'#, github: 'lostapathy/yaml_db'
-gem 'sass-rails'
-gem 'bootstrap-sass'#, '~&gt; 2.3.2.0'
-gem 'compass-rails'#, github: "Compass/compass-rails", branch: "rails4-hack"
-gem 'friendly_id'#, github: 'norman/friendly_id'
+gem 'yaml_db'
+gem 'sass-rails',   '~> 3.2.3'
+gem 'bootstrap-sass', '~> 2.3.2.0'
+gem 'compass-rails'
+gem 'friendly_id'
 gem 'state_machine'
 gem 'russian'
 gem 'jquery-rails'
-gem 'coffee-rails'
+gem 'coffee-rails', '~> 3.2.1'
 
 group :assets do
-  gem 'uglifier'
+  gem 'uglifier', '>= 1.0.3'
   gem 'turbo-sprockets-rails3'
 end
 
