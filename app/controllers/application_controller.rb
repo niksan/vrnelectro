@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :find_root_categories, :initialize_cart, :init_slides
+  before_filter :find_root_categories, :initialize_cart, :init_slides, :set_metatags
   
   private
     
@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
 
     def find_root_categories
       @root_categories = Category.roots.order(:position)
+    end
+
+    def set_metatags
+      @meta_tags[:title] = 'Интернет магазин электрики и электротоваров'
     end
 
 end
