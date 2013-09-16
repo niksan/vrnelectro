@@ -40,7 +40,11 @@ RailsAdmin.config do |config|
     show do; end
     edit do
       field :title
-      field :body, :ck_editor
+      field :body, :text do
+        ckeditor do 
+          true
+        end
+      end
     end
     export do; end
   end
@@ -52,6 +56,7 @@ RailsAdmin.config do |config|
     })
     nestable_list true
     configure :id, :integer 
+    configure :parent_id, :enum
     configure :name, :string 
     configure :slug, :string 
     configure :ancestry, :string 
@@ -60,10 +65,12 @@ RailsAdmin.config do |config|
     object_label_method :name
     list do;
       field :id
+      field :parent_id
       field :name
     end
     show do; end
     edit do;
+      field :parent_id
       field :name
     end
     export do; end
@@ -118,7 +125,11 @@ RailsAdmin.config do |config|
       field :category
       field :lot
       field :name
-      field :description, :ck_editor
+      field :description, :text do
+        ckeditor do 
+          true
+        end
+      end
       field :price
       field :related_products
       field :photos
