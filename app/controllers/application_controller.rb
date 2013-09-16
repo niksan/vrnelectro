@@ -17,6 +17,7 @@ class ApplicationController < ActionController::Base
     end
 
     def set_metatags
+      @meta_tags = {}
       @meta_tags[:title] = 'Интернет магазин электрики и электротоваров'
     end
 
