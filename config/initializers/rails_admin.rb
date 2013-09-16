@@ -65,8 +65,8 @@ RailsAdmin.config do |config|
     object_label_method :name
     list do;
       field :id
-      field :parent_id
       field :name
+      field :parent_id
     end
     show do; end
     edit do;
