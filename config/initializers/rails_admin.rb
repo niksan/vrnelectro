@@ -137,6 +137,26 @@ RailsAdmin.config do |config|
     export do; end
   end
 
+  config.model 'Price' do
+    configure :id, :integer 
+    configure :name, :string 
+    configure :key, :string 
+    configure :file, :carrierwave
+    configure :created_at, :datetime 
+    configure :updated_at, :datetime 
+    list do
+      field :name
+      field :key
+    end
+    show do; end
+    edit do
+      field :key
+      field :name
+      field :file
+    end
+    export do; end
+  end
+
   config.model 'Role' do
     visible false
     configure :id, :integer 
