@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130916134728) do
+ActiveRecord::Schema.define(:version => 20131010143624) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -125,13 +125,13 @@ ActiveRecord::Schema.define(:version => 20130916134728) do
     t.string   "lot"
     t.string   "name"
     t.text     "description"
-    t.decimal  "price",            :precision => 7, :scale => 2, :default => 0.0
+    t.float    "price",            :default => 0.0
     t.string   "ancestry"
     t.string   "slug"
     t.text     "related_products"
-    t.boolean  "disabled",                                       :default => false
-    t.datetime "created_at",                                                        :null => false
-    t.datetime "updated_at",                                                        :null => false
+    t.boolean  "disabled",         :default => false
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
     t.integer  "position"
   end
 

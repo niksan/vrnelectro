@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
   attr_accessible :description, :lot, :name, :price, :related_products, :category_id, :photos_attributes, :remove_image, :disabled
-  validates :name, :price, :category_id, presence: true
+  validates :name, :price, presence: true
   validates :lot, uniqueness: true, allow_blank: true
   has_ancestry
   extend FriendlyId
@@ -43,10 +43,5 @@ class Product < ActiveRecord::Base
   def more_photos
     photos[1..-1]
   end
-
-  def destroy
-    update_attributes(disabled: true)
-  end
-  alias destroy! destroy
 
 end
