@@ -13,6 +13,7 @@ class Product < ActiveRecord::Base
   
   default_scope where(disabled: false).order('category_id, price, name')
   scope :iek, where(mark: 'iek')
+  scope :fluke, where(mark: 'fluke')
   
   def related_products_enum
     Product.order(:name).map { |p| [p.name, p.id] }
