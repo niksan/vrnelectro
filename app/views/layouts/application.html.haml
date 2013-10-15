@@ -21,7 +21,7 @@
         .email vrnelectro@mail.ru
       #cart
         %span.title Корзина
-        = render 'share/cart_content'
+        .cont_wrap= render partial: 'share/cart_content', locals: { cart: @cart }
       #additional_block
         .navigation
           = link_to 'Обратная связь', root_path

@@ -3,9 +3,9 @@
     У вас
     = cart.quantity
     товаров
-    %br
-    На сумму
-    = cart.price
-    руб.
+    .total
+      На сумму
+      = cart.price.round(2)
+      руб.
   - else
     %p= t('cart.empty') 
