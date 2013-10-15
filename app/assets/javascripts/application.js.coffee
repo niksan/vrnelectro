@@ -7,6 +7,17 @@
 #= require_tree ../../../vendor/assets/javascripts/gritter
 #= require_tree .
 #= require_self
+jQuery.fn.addActiveClassOnHover = (selector) ->
+  $(selector).hover(
+    -> $(this).addClass('active'),
+    -> $(this).removeClass('active')
+  )
+
+jQuery.fn.goToChildUrl = (selector) ->
+  $(selector).click( ->
+    window.location = $(this).find("a").attr("href")
+    return false
+  )
 
 jQuery ->
   $('a.fancybox').fancybox()
