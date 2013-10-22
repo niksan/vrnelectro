@@ -1,4 +1,5 @@
 ru:
+  
   home:
     name: "Главная"
   views:
@@ -7,6 +8,22 @@ ru:
       next: "Следующая &raquo;"
       truncate: "…"
   admin:
+    js:
+      is_blank: 'Не заполнено'
+      is_present: 'Заполнено'
+      true: 'Да'
+      false: 'Нет'
+      date: Дата ...
+      between_and_: Между ... и ...
+      today: Сегодня
+      yesterday: Вчера
+      this_week: Эта неделя
+      last_week: Последняя неделя
+      number: Номер ...
+      contains: Включает
+      is_exactly: В точности
+      starts_with: Начинается с
+      ends_with: Заканчивается на
     home: 
       name: "На сайт"
     misc:
