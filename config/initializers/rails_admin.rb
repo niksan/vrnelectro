@@ -40,11 +40,7 @@ RailsAdmin.config do |config|
     show do; end
     edit do
       field :title
-      field :body, :text do
-        ckeditor do 
-          true
-        end
-      end
+      field :body, :ck_editor
     end
     export do; end
   end
@@ -99,6 +95,7 @@ RailsAdmin.config do |config|
   config.model 'Product' do
     nestable_list true
     configure :category, :belongs_to_association
+    configure :category_id, :enum
     configure :photos, :has_many_association
     configure :id, :integer 
     configure :lot, :string 
@@ -122,14 +119,10 @@ RailsAdmin.config do |config|
     end
     show do; end
     edit do
-      field :category
+      field :category_id
       field :lot
       field :name
-      field :description, :text do
-        ckeditor do 
-          true
-        end
-      end
+      field :description, :ck_editor
       field :price
       field :related_products
       field :photos

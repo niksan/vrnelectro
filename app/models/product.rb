@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :description, :lot, :name, :price, :related_products, :category_id, :photos_attributes, :remove_image, :disabled, :mark
+  #attr_accessible :description, :lot, :name, :price, :related_products, :category_id, :photos_attributes, :remove_image, :disabled, :mark
   validates :name, :price, presence: true
   validates :lot, uniqueness: true, allow_blank: true
   has_ancestry
@@ -11,9 +11,13 @@ class Product < ActiveRecord::Base
   accepts_nested_attributes_for :photos, allow_destroy: true
   has_paper_trail
   
-  default_scope where(disabled: false).order('category_id, price, name')
-  scope :iek, where(mark: 'iek')
-  scope :fluke, where(mark: 'fluke')
+  default_scope -> { where(disabled: false).order('category_id, price, name') }
+  scope :iek, -> { where(mark: 'iek') }
+  scope :fluke, -> { where(mark: 'fluke') }
+  
+  def category_id_enum
+    Category.new.parent_id_enum 
+  end
   
   def related_products_enum
     Product.order(:name).map { |p| [p.name, p.id] }

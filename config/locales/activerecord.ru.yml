@@ -87,6 +87,7 @@ ru:
         photos_count: 'кол-во изображений'
         photos_attributes: 'изображение'
         category: 'категория'
+        category_id: 'категория'
         description: 'описание'
         related_products: 'связанные продукты'
         photos: 'фото'

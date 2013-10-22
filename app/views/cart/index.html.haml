@@ -1,5 +1,5 @@
 %h1= t('cart.title')
-= form_for :cart_item, url: cart_path, method: :put do |f|
+= form_for :cart_item, url: cart_path, method: :patch do |f|
   %table#cart_table.table.table-hover.table-bordered.table-condensed
     %thead
       %th.name= t('cart_item.name')

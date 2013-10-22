@@ -17,7 +17,7 @@ VrnElectro::Application.routes.draw do
   end
 
   get 'cart' => 'cart#index', as: 'cart_index'
-  put 'cart' => 'cart#update', as: 'cart'
+  patch 'cart' => 'cart#update', as: 'cart'
 
   resources :orders, only: [:new, :create]
 
