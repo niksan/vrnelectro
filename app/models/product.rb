@@ -4,7 +4,7 @@ class Product < ActiveRecord::Base
   validates :lot, uniqueness: true, allow_blank: true
   has_ancestry
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:history, :finders]
   serialize :related_products, Array
   has_many :photos, dependent: :destroy
   belongs_to :category

@@ -1,7 +1,6 @@
 class Article < ActiveRecord::Base
-  #attr_accessible :body, :title
   has_ancestry
   extend FriendlyId
-  friendly_id :title, use: :slugged
+  friendly_id :title, use: [:history, :finders]
   validates :title, presence: true
 end

@@ -1,57 +1,55 @@
 !!!
 %html
-%head
-  %title= @meta_tags[:title]
-  = stylesheet_link_tag 'application', media: 'all'
-  = javascript_include_tag 'application'
-  = csrf_meta_tags
-  = include_gritter
-%body
-  =# gflash
-  =# gritter_flash_messages
-  #container
-    %header
-      #logo_block
-        = link_to image_tag('logo.png', alt: 'vrn-electro'), root_path, id: 'logo'
-        %span.slogan Интернет магазин электроники для дома, офиса и производства
-      #contacts_block
-        .phone
-          %span.prefix +7 (473)
-          %span.number 292-42-79
-        .email vrnelectro@mail.ru
-      #cart
-        %span.title Корзина
-        .cont_wrap= render partial: 'share/cart_content', locals: { cart: @cart }
-      #additional_block
-        .navigation
-          = link_to 'Обратная связь', root_path
-          |
-          = link_to 'Карта сайта', root_path
-        = link_to 'Оформить заявку', cart_index_path, class: 'make_request'
-        .social_networks
-          %script{ type: 'text/javascript', src: '//yandex.st/share/share.js', charset: 'utf-8' }
-          .yashare-auto-init{ :'data-yashareL10n' => 'ru', :'data-yashareType' => 'none', :'data-yashareQuickServices' => 'vkontakte,facebook,twitter,odnoklassniki' } 
-    #top_line
-    #slider= render partial: 'share/slider', locals: { slides: @slides } if @slides.size >= 2
-    %nav#main_menu= render 'share/main_menu'
-    #wrapper
-      #content
-        .left
-          %span.header Продукция
-          %nav#catalog_menu= render 'share/catalog_menu'
-        %section
-          = yield
+  %head
+    %title= @meta_tags[:title]
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    = gflash
+    #container
+      %header
+        #logo_block
+          = link_to image_tag('logo.png', alt: 'vrn-electro'), root_path, id: 'logo'
+          %span.slogan Интернет магазин электроники для дома, офиса и производства
+        #contacts_block
+          .phone
+            %span.prefix +7 (473)
+            %span.number 292-42-79
+          .email vrnelectro@mail.ru
+        #cart
+          %span.title Корзина
+          .cont_wrap= render partial: 'share/cart_content', locals: { cart: @cart }
+        #additional_block
+          .navigation
+            = link_to 'Обратная связь', root_path
+            |
+            = link_to 'Карта сайта', root_path
+          = link_to 'Оформить заявку', cart_index_path, class: 'make_request'
+          .social_networks
+            %script{ type: 'text/javascript', src: '//yandex.st/share/share.js', charset: 'utf-8' }
+            .yashare-auto-init{ :'data-yashareL10n' => 'ru', :'data-yashareType' => 'none', :'data-yashareQuickServices' => 'vkontakte,facebook,twitter,odnoklassniki' } 
+      #top_line
+      #slider= render partial: 'share/slider', locals: { slides: @slides } if @slides.size >= 2
+      %nav#main_menu= render 'share/main_menu'
+      #wrapper
+        #content
+          .left
+            %span.header Продукция
+            %nav#catalog_menu= render 'share/catalog_menu'
+          %section
+            = yield
+          .clearfix
+        %footer
+          .left
+            %p Тел.: +7(473)292-42-79, 295-56-50
+            %p E-mail: vrnelectro@mail.ru
+            %p Адрес: 394026, Россия, г. Воронеж, пр-кт Труда 67, офис 5
+          .central
+            =# render 'share/counters/liveinternet'
+          .right
+            %p Copyright &copy; 2013. All Rights Reserved
+            %p
+              Разработка сайта:
+              = link_to 'NikSan', 'http://niksan.ru'
         .clearfix
-      %footer
-        .left
-          %p Тел.: +7(473)292-42-79, 295-56-50
-          %p E-mail: vrnelectro@mail.ru
-          %p Адрес: 394026, Россия, г. Воронеж, пр-кт Труда 67, офис 5
-        .central
-          = render 'share/counters/liveinternet'
-        .right
-          %p Copyright &copy; 2013. All Rights Reserved
-          %p
-            Разработка сайта:
-            = link_to 'NikSan', 'http://niksan.ru'
-      .clearfix

@@ -4,9 +4,11 @@
 #= require ../../../vendor/assets/javascripts/bootstrap-carousel
 #= require ../../../vendor/assets/javascripts/bootstrap-alert
 #= require_tree ../../../vendor/assets/javascripts/fancybox
-#= require_tree ../../../vendor/assets/javascripts/gritter
+#= require gritter
+#= require turbolinks
 #= require_tree .
 #= require_self
+
 jQuery.fn.addActiveClassOnHover = (selector) ->
   $(selector).hover(
     -> $(this).addClass('active'),

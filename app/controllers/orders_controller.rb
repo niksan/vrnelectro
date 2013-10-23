@@ -11,10 +11,10 @@ class OrdersController < ApplicationController
         OrderMailer.order(get_order_datas(params[:order]), @cart.to_s).deliver
         @cart.empty!
       end
-      flash[:success] = t('order.save.success')
+      gflash success: t('order.save.success')
       redirect_to root_path
      rescue
-       flash[:error] = t('order.save.error')
+       gflash error: t('order.save.error')
        render :new
      end
    end

@@ -2,7 +2,7 @@ class CartController < ApplicationController
 
   def index
     if @cart.empty?
-      flash[:alert] = t('cart.empty')
+      gflash warning: t('cart.empty')
       redirect_to root_path
     end
   end

@@ -2,7 +2,7 @@ class Category < ActiveRecord::Base
   #attr_accessible :name, :parent_id
   has_ancestry cache_depth: true
   extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :name, use: [:history, :finders]
   validates :name, presence: true
   has_many :products, dependent: :destroy
   default_scope -> { order(:position) }
