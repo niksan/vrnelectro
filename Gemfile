@@ -36,10 +36,10 @@ group :development do
   gem 'letter_opener'
   gem 'thin'
   gem 'capistrano', '~> 3.0.0', require: false
-  gem 'capistrano-rvm', '~> 0.0.2'
   gem 'capistrano-rails'
 end
 
+gem 'capistrano-rvm', '~> 0.0.2'
 gem 'unicorn'
 gem 'debugger'
 gem 'therubyracer'
