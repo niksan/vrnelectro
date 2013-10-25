@@ -1,6 +1,7 @@
 set :application,          'shop.vrnelectro'
 set :repo_url,             'git://github.com/niksan/vrnelectro.git'
 set :scm,                  :git
+set :rvm_ruby_string,      '2.0.0-p247@rails4'
 set :deploy_to,            "/srv/htdocs/#{fetch(:application)}"
 set :unicorn_conf,         "#{fetch(:deploy_to)}/current/config/unicorn.rb"
 set :unicorn_pid,          "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
@@ -10,15 +11,29 @@ set :pty,                  true
 set :linked_files,         %w{config/database.yml}
 set :linked_dirs,          %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 set :keep_releases,        5
-set :unicorn_start_cmd,    "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)} do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production)"
+
+set :unicorn_start_cmd,    "cd #{deploy_to}/current; rvm #{fetch(:rvm_ruby_string)} do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production"
 
 namespace :deploy do
 
+  desc 'Start application'
+  task :start do
+    on roles(:root), in: :sequence, wait: 5 do
+      execute fetch(:unicorn_start_cmd)
+    end
+  end
+
+  desc 'Stop application'
+  task :stop do
+    on roles(:root), in: :sequence, wait: 5 do
+      execute "[ -f #{fetch(:unicorn_pid)} ] && kill -QUIT `cat #{fetch(:unicorn_pid)}`"
+    end
+  end
+
   desc 'Restart application'
   task :restart do
-    on roles(:app), in: :sequence, wait: 5 do
-      # Your restart mechanism here, for example:
-      # execute :touch, release_path.join('tmp/restart.txt')
+    on roles(:root), in: :sequence, wait: 5 do
+      execute "[ -f #{fetch(:unicorn_pid)} ] && kill -USR2 `cat #{fetch(:unicorn_pid)}` || #{fetch(:unicorn_start_cmd)}"
     end
   end
 
