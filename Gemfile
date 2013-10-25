@@ -38,7 +38,8 @@ group :development do
 end
 
 gem 'unicorn'
-gem 'capistrano', '~> 3.0.0'
+gem 'capistrano', '~> 3.0.0', require: false, group: :development
+gem 'rvm-capistrano'
 gem 'debugger'
 gem 'therubyracer'
 gem 'execjs'
