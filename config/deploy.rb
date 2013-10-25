@@ -1,6 +1,7 @@
 set :application,          'shop.vrnelectro'
 set :repo_url,             'git://github.com/niksan/vrnelectro.git'
 set :scm,                  :git
+set :rails_env,            'production'
 set :rvm_ruby_string,      '2.0.0-p247@rails4'
 set :deploy_to,            "/srv/htdocs/#{fetch(:application)}"
 set :unicorn_conf,         "#{fetch(:deploy_to)}/current/config/unicorn.rb"
@@ -34,17 +35,16 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      execute 'cap production deploy:stop'
-      execute 'cap production deploy:start'
+      execute ""
+      execute "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; [ -f #{fetch(:unicorn_pid)} ] && kill -USR2 `cat #{fetch(:unicorn_pid)}` || #{fetch(:unicorn_start_cmd)}"
     end
   end
 
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
+      within release_path do
+        execute :rake, 'cache:clear'
+      end
     end
   end
 

@@ -6,9 +6,9 @@ set :stage, :production
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
 role :all, %w{@82.196.2.187}
-role :app, %w{root@82.196.2.187}
-role :web, %w{root@82.196.2.187}
-role :db,  %w{root@82.196.2.187}
+role :app, %w{82.196.2.187}
+role :web, %w{82.196.2.187}
+role :db,  %w{82.196.2.187}
 
 # Extended Server Syntax
 # ======================

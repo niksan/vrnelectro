@@ -35,11 +35,12 @@ group :development do
   gem 'meta_request'
   gem 'letter_opener'
   gem 'thin'
+  gem 'capistrano', '~> 3.0.0', require: false
+  gem 'capistrano-rvm', '~> 0.0.2'
+  gem 'capistrano-rails'
 end
 
 gem 'unicorn'
-gem 'capistrano', '~> 3.0.0', require: false, group: :development
-gem 'rvm-capistrano'
 gem 'debugger'
 gem 'therubyracer'
 gem 'execjs'
