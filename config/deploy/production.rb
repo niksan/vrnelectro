@@ -5,7 +5,7 @@ set :stage, :production
 # Supports bulk-adding hosts to roles, the primary
 # server in each group is considered to be the first
 # unless any hosts have the primary property set.
-role :all, %w{@82.196.2.187}
+role :all, %w{82.196.2.187}
 role :app, %w{82.196.2.187}
 role :web, %w{82.196.2.187}
 role :db,  %w{82.196.2.187}
