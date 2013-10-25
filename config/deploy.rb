@@ -8,15 +8,21 @@ set :unicorn_conf,         "#{fetch(:deploy_to)}/current/config/unicorn.rb"
 set :unicorn_pid,          "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
 set :bundle_cmd,           "rvm use #{fetch(:rvm_ruby_string)} do bundle install"
 set :format,               :pretty
-set :log_level,            :error
+set :log_level,            :debug
 set :pty,                  true
 set :linked_files,         %w{config/database.yml}
 set :linked_dirs,          %w{bin log vendor/bundle public/system}
 set :keep_releases,        5
 
-set :unicorn_start_cmd,    "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; rvm #{fetch(:rvm_ruby_string)} do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production"
+set :unicorn_start_cmd,    "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production"
 
 namespace :deploy do
+
+  before :starting, :set_shared_assets do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute "cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)}"
+    end
+  end
 
   desc 'Start application'
   task :start do
