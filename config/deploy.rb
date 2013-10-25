@@ -18,12 +18,6 @@ set :unicorn_start_cmd,    "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd
 
 namespace :deploy do
 
-  before :starting, :set_shared_assets do
-    on roles(:app), in: :sequence, wait: 5 do
-      execute "cd #{fetch(:deploy_to)}/current; rvm #{fetch(:rvm_ruby_string)}"
-    end
-  end
-
   desc 'Start application'
   task :start do
     on roles(:app), in: :sequence, wait: 5 do
