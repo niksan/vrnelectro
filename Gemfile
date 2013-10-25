@@ -39,7 +39,7 @@ group :development do
 #  gem 'capistrano-rails'
 end
 
-gem 'capistrano-rvm', '~> 0.0.2'
+#gem 'capistrano-rvm', '~> 0.0.2'
 gem 'unicorn'
 gem 'debugger'
 gem 'therubyracer'
