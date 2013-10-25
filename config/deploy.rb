@@ -19,22 +19,24 @@ namespace :deploy do
 
   desc 'Start application'
   task :start do
-    on roles(:root), in: :sequence, wait: 5 do
+    on roles(:app), in: :sequence, wait: 5 do
       execute fetch(:unicorn_start_cmd)
     end
   end
 
   desc 'Stop application'
   task :stop do
-    on roles(:root), in: :sequence, wait: 5 do
+    on roles(:app), in: :sequence, wait: 5 do
       execute "[ -f #{fetch(:unicorn_pid)} ] && kill -QUIT `cat #{fetch(:unicorn_pid)}`"
     end
   end
 
   desc 'Restart application'
   task :restart do
-    on roles(:root), in: :sequence, wait: 5 do
-      execute "[ -f #{fetch(:unicorn_pid)} ] && kill -USR2 `cat #{fetch(:unicorn_pid)}` || #{fetch(:unicorn_start_cmd)}"
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :cap, 'production deploy:stop'
+      execute :cap, 'production deploy:start'
+#      execute "[ -f #{fetch(:unicorn_pid)} ] && kill -USR2 `cat #{fetch(:unicorn_pid)}` || #{fetch(:unicorn_start_cmd)}"
     end
   end
 
