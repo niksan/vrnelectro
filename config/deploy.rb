@@ -13,7 +13,7 @@ set :linked_files,         %w{config/database.yml}
 set :linked_dirs,          %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 set :keep_releases,        5
 
-set :unicorn_start_cmd,    "cd #{deploy_to}/current; #{fetch(:bundle_cmd)}; rvm #{fetch(:rvm_ruby_string)} do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production"
+set :unicorn_start_cmd,    "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; rvm #{fetch(:rvm_ruby_string)} do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production"
 
 namespace :deploy do
 
@@ -34,9 +34,8 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      execute :cap, 'production deploy:stop'
-      execute :cap, 'production deploy:start'
-#      execute "[ -f #{fetch(:unicorn_pid)} ] && kill -USR2 `cat #{fetch(:unicorn_pid)}` || #{fetch(:unicorn_start_cmd)}"
+      execute 'cap production deploy:stop'
+      execute 'cap production deploy:start'
     end
   end
 
