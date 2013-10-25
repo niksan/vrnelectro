@@ -6,7 +6,7 @@ set :rvm_ruby_string,      '2.0.0-p247@rails4'
 set :deploy_to,            "/srv/htdocs/#{fetch(:application)}"
 set :unicorn_conf,         "#{fetch(:deploy_to)}/current/config/unicorn.rb"
 set :unicorn_pid,          "#{fetch(:deploy_to)}/shared/pids/unicorn.pid"
-set :bundle_cmd,           "rvm #{fetch(:rvm_ruby_string)} do bundle install"
+set :bundle_cmd,           "rvm use #{fetch(:rvm_ruby_string)}; bundle install"
 set :format,               :pretty
 set :log_level,            :debug
 set :pty,                  true
@@ -14,7 +14,7 @@ set :linked_files,         %w{config/database.yml}
 set :linked_dirs,          %w{bin log vendor/bundle public/system}
 set :keep_releases,        5
 
-set :unicorn_start_cmd,    "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production"
+set :unicorn_start_cmd,    "source ~/.bash_profile; cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production"
 
 namespace :deploy do
 
