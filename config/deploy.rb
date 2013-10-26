@@ -14,7 +14,8 @@ set :linked_files,         %w{config/database.yml}
 set :linked_dirs,          %w{bin log vendor/bundle public/system}
 set :keep_releases,        5
 
-set :unicorn_start_cmd,    "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production"
+#set :unicorn_start_cmd,    "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production"
+set :unicorn_start_cmd,    "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)} do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E #{fetch(:rails_env)})"
 
 namespace :deploy do
 
@@ -28,7 +29,7 @@ namespace :deploy do
   desc 'Stop application'
   task :stop do
     on roles(:app), in: :sequence, wait: 5 do
-      execute "[ -f #{fetch(:unicorn_pid)} ] && kill -QUIT `cat #{fetch(:unicorn_pid)}`"
+      execute "if [ -f #{fetch(:unicorn_pid)} ] && [ -e /proc/$(cat #{fetch(:unicorn_pid)}) ]; then kill -QUIT `cat #{fetch(:unicorn_pid)}`; fi"
     end
   end
 

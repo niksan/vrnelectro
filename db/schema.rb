@@ -117,8 +117,8 @@ ActiveRecord::Schema.define(version: 20131022110656) do
     t.string   "name"
     t.string   "key"
     t.string   "file"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "products", force: true do |t|
@@ -170,8 +170,8 @@ ActiveRecord::Schema.define(version: 20131022110656) do
     t.string   "img"
     t.string   "ancestry"
     t.integer  "position"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
