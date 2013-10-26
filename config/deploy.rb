@@ -11,7 +11,7 @@ set :format,               :pretty
 set :log_level,            :debug
 set :pty,                  true
 set :linked_files,         %w{config/database.yml}
-set :linked_dirs,          %w{bin log vendor/bundle public/system}
+set :linked_dirs,          %w{bin log vendor/bundle public/system public/uploads}
 set :keep_releases,        5
 
 set :unicorn_start_cmd,    "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)} do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E #{fetch(:rails_env)})"
@@ -40,13 +40,6 @@ namespace :deploy do
     end
   end
 
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      within release_path do
-        execute :rake, "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; rake cache:clear"
-      end
-    end
-  end
 
   after :finishing, 'deploy:cleanup'
 
