@@ -29,3 +29,6 @@ jQuery ->
   $('ul#products .img img').click ->
     window.location = $(@).parent().parent().find('.name a').attr('href')
     return false
+  $('#cart').click ->
+    window.location = $('.make_request').attr('href')
+    return false
