@@ -14,7 +14,6 @@ set :linked_files,         %w{config/database.yml}
 set :linked_dirs,          %w{bin log vendor/bundle public/system}
 set :keep_releases,        5
 
-#set :unicorn_start_cmd,    "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E production"
 set :unicorn_start_cmd,    "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_string)} do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)} -E #{fetch(:rails_env)})"
 
 namespace :deploy do
@@ -44,7 +43,7 @@ namespace :deploy do
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       within release_path do
-        execute :rake, 'cache:clear'
+        execute :rake, "cd #{fetch(:deploy_to)}/current; #{fetch(:bundle_cmd)}; rake cache:clear"
       end
     end
   end
