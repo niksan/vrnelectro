@@ -152,16 +152,30 @@ nav#main_menu
       list-style-type: none
       li
         display: block
+        position: relative
         margin-bottom: 4px
         a
           display: block
           padding: 5px 10px 5px 15px
           color: #fff
           +text-shadow(#666 1px 1px 0)
+        &:hover
+          ul
+            display: block
+            width: 256px
+            background: #fff
+            position: absolute
+            border: solid 1px #fff
+            left: 231px
+            top: 0
+            li
+              margin-bottom: 1px
       li:nth-child(odd)
         background: #aaa497
       li:nth-child(even)
         background: #757169
+      ul
+        display: none
   section
     display: block
     float: left

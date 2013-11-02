@@ -1,3 +1,5 @@
 %ul.catalogs
   - @root_categories.each do |cat|
-    %li= link_to cat.name, category_path(cat)
+    %li
+      = link_to cat.name, category_path(cat)
+      = submunu(cat)
