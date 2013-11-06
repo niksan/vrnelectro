@@ -124,7 +124,7 @@ RailsAdmin.config do |config|
       field :name
       field :description, :ck_editor
       field :price
-      field :related_products
+#      field :related_products
       field :photos
     end
     export do; end
