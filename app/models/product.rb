@@ -28,7 +28,7 @@ class Product < ActiveRecord::Base
   end
 
   def related
-    self.class.includes(:category).find(self[:related_products][1..-1])
+    self[:related_products][1..-1] ? self.class.includes(:category).find(self[:related_products][1..-1]) : []
   end
 
   def has_related?

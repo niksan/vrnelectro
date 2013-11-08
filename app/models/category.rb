@@ -42,7 +42,8 @@ class Category < ActiveRecord::Base
     def add_to_tree(cat)
       dashes = cat.depth > 0 ? ('-' * cat.depth + ' ') : ''
       if cat.id != self.id
-        @categories_tree << [ dashes + cat.name, cat.id ] 
+        cat_name = (cat.depth == 0) ? "<strong>#{cat.name}</strong>" : cat.name
+        @categories_tree << [ dashes + cat_name, cat.id ] 
         cat.children.each { |child| add_to_tree(child) }
       end
     end
