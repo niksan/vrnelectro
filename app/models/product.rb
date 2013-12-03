@@ -14,6 +14,7 @@ class Product < ActiveRecord::Base
   default_scope -> { where(disabled: false).order('category_id, price, name') }
   scope :iek, -> { where(mark: 'iek') }
   scope :fluke, -> { where(mark: 'fluke') }
+  scope :main, -> { where(show_on_main: true) }
   
   def category_id_enum
     Category.new.parent_id_enum 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131022110656) do
+ActiveRecord::Schema.define(version: 20131203075754) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -117,8 +117,8 @@ ActiveRecord::Schema.define(version: 20131022110656) do
     t.string   "name"
     t.string   "key"
     t.string   "file"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "products", force: true do |t|
@@ -135,10 +135,12 @@ ActiveRecord::Schema.define(version: 20131022110656) do
     t.datetime "updated_at",                       null: false
     t.integer  "position"
     t.string   "mark"
+    t.boolean  "show_on_main"
   end
 
   add_index "products", ["ancestry"], name: "index_products_on_ancestry", using: :btree
   add_index "products", ["lot"], name: "index_products_on_lot", using: :btree
+  add_index "products", ["show_on_main"], name: "index_products_on_show_on_main", using: :btree
   add_index "products", ["slug"], name: "index_products_on_slug", using: :btree
 
   create_table "rails_admin_histories", force: true do |t|
@@ -170,8 +172,8 @@ ActiveRecord::Schema.define(version: 20131022110656) do
     t.string   "img"
     t.string   "ancestry"
     t.integer  "position"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: true do |t|

@@ -104,6 +104,7 @@ RailsAdmin.config do |config|
     configure :price, :decimal 
     configure :ancestry, :string 
     configure :slug, :string 
+    configure :show_on_main, :boolean
     configure :related_products, :enum
     configure :created_at, :datetime 
     configure :updated_at, :datetime 
@@ -115,6 +116,7 @@ RailsAdmin.config do |config|
       field :price
       field :lot
       field :photos_count
+      field :show_on_main
       field :category
     end
     show do; end
@@ -124,6 +126,7 @@ RailsAdmin.config do |config|
       field :name
       field :description, :ck_editor
       field :price
+      field :show_on_main
 #      field :related_products
       field :photos
     end

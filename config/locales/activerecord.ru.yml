@@ -95,6 +95,7 @@ ru:
         name: 'название'
         price: 'цена'
         lot: 'лот'
+        show_on_main: 'показывать на главной'
         created_at: 'создано'
         updated_at: 'обновлено'
       slide:
