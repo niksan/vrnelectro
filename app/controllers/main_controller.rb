@@ -2,7 +2,7 @@ class MainController < ApplicationController
   authorize_resource class: 'Product'
   
   def index
-    @products = Product.limit(100)
+    @products = Product.main
   end
 
 end
