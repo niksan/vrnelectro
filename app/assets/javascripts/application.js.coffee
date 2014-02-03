@@ -5,7 +5,6 @@
 #= require ../../../vendor/assets/javascripts/bootstrap-alert
 #= require_tree ../../../vendor/assets/javascripts/fancybox
 #= require gritter
-#= require turbolinks
 #= require_tree .
 #= require_self
 

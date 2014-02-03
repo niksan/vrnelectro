@@ -25,7 +25,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'roo'
 gem 'paper_trail', github: 'airblade/paper_trail'
 gem 'jbuilder', '~> 1.2'
-gem 'turbolinks'
 
 gem 'uglifier', '>= 1.3.0'
 
